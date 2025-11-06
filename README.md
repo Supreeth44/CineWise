@@ -1,2 +1,27 @@
 # CineWise
-CineWise: Full-stack AI app where a React frontend calls a Python/Flask API. The backend uses Selenium to scrape live IMDb reviews, VADER to get a sentiment score, and Google's Gemini AI to generate a Pros/Cons summary
+1. Set up Backend Dependencies:
+1. Open a terminal in your product-analyzer folder.
+2. cd backend
+3. .\venv\Scripts\activate
+4. (Optional but recommended) Create a requirements.txt file by running: pip freeze
+> requirements.txt
+2. Set up Frontend Dependencies:
+1. Open a second terminal.
+2. cd frontend
+3. Run: npm install
+How to Run Your Project (Every Time)
+You must do this every time you want to run your app.
+1. Start the Backend Server (Terminal 1):
+1. Open your first terminal.
+2. Navigate to the backend folder: cd backend
+3. Activate the virtual environment: .\venv\Scripts\activate
+4. Run the Python server: python app.py
+5. Leave this terminal running. It should say * Running on http://127.0.0.1:5000.
+2. Start the Frontend Server (Terminal 2):
+1. Open a second, new terminal.
+2. Navigate to the frontend folder: cd frontend
+3. Run the React app: npm run dev
+4. Leave this terminal running. It should say ➜ Local: http://localhost:5173/.
+3. View Your App:
+1. Go to your browser.
+2. Open the frontend URL: http://localhost:5173
