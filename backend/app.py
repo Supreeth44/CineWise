@@ -16,7 +16,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 
 # --- !! YOUR API KEY !! ---
-YOUR_API_KEY = "AIzaSyB5i1L4zpA2j46MUvu0dJPHwi65Z0golK4"
+YOUR_API_KEY = "YOUR_API_KEY"
 
 # --- NEW: Configure the AI ---
 try:
