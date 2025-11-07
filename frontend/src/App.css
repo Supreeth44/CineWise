@@ -1,0 +1,263 @@
+/* Main App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+/* Header: "CineWise" */
+.App-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.App-header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  /* Cool gradient text effect */
+  background: linear-gradient(90deg, #be93fd, #c642f5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.App-header p {
+  font-size: 1.25rem;
+  color: #a0a0a0;
+  margin-top: 0.5rem;
+}
+
+/* Main Content Area */
+main {
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Form: Input + Button */
+form {
+  display: flex;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Keeps the rounded corners */
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+input[type="text"] {
+  flex-grow: 1; /* Takes up all available space */
+  font-size: 1.1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: white;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border: none;
+  background-color: #9333ea; /* Purple */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #a855f7;
+}
+
+button:disabled {
+  background-color: #585858;
+  cursor: not-allowed;
+}
+
+/* Results Box */
+.result-box {
+  margin-top: 3rem;
+  text-align: left;
+  
+  /* The "Glass" effect */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+}
+
+.result-box h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.result-box p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.result-box hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* Error Box Styling */
+.error {
+  background: rgba(255, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  color: #fca5a5;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* AI Summary Formatting */
+.ai-summary {
+  white-space: pre-wrap; /* This keeps the bullet points! */
+  color: white !important; /* Make sure it's bright */
+}
+
+/* --- Responsiveness for Mobile --- */
+@media (max-width: 768px) {
+  .App {
+    padding: 2rem 1rem;
+  }
+
+  .App-header h1 {
+    font-size: 3rem;
+  }
+
+  .App-header p {
+    font-size: 1rem;
+  }
+
+  /* Stack the input and button on mobile */
+  form {
+    flex-direction: column;
+    gap: 1rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+  input[type="text"] {
+    border-radius: 12px; /* Give it rounded corners now */
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  button {
+    border-radius: 12px; /* Give it rounded corners now */
+  }
+
+  .result-box {
+    padding: 1.5rem;
+  }
+}
+
+/* =========================================
+  UPDATED CSS FOR THE TOP MOVIES LIST
+=========================================
+*/
+
+.top-movies-container {
+  width: 100%;
+  max-width: 1200px; /* Make this section wider than the main app */
+  margin-top: 6rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-movies-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #eee;
+}
+
+.top-movies-subtitle {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* This is the new list style */
+.movie-list {
+  display: grid;
+  /* Responsive 2-column layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.movie-list-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ccc;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.movie-list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.movie-emoji {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.movie-title {
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1; /* Make the title take up available space */
+}
+
+.movie-rating {
+  font-weight: 600;
+  color: #f5c518; /* IMDb yellow */
+  font-size: 1rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+/* On mobile, stack into a single column */
+@media (max-width: 768px) {
+  .movie-list {
+    grid-template-columns: 1fr; /* Single column */
+  }
+
+  .top-movies-title {
+    font-size: 2rem;
+  }
+}
