@@ -25,3 +25,5 @@ You must do this every time you want to run your app.
 3. View Your App:
 1. Go to your browser.
 2. Open the frontend URL: http://localhost:5173
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/f88dbda2-548e-4d10-92b3-f87d20ee9d5d" />
+<img width="2559" height="1599" alt="Screenshot 2025-11-07 124807" src="https://github.com/user-attachments/assets/07b7b3af-33d4-4a32-baaf-e1811430f931" />
